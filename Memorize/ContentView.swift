@@ -9,15 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var emojis = ["🐶", "🐱", "🐯", "🐮","🐭", "🐼","🐻‍❄️","🐨","🦁","🐷","🐸","🐵","🐔","🐧","🐦","🦆","🐥","🦅","🦉","🦇"]
-    @State var emojiCount = 6
+    @State var emojiCount = 12
     
     var body: some View {
         VStack{
-            HStack{
-                ForEach(emojis[0..<emojiCount], id: \.self){ emoji in
-                    CardView(content: emoji)
+            ScrollView{
+                LazyVGrid(columns: [GridItem(),GridItem(),GridItem(),]){
+                    ForEach(emojis[0..<emojiCount], id: \.self){ emoji in
+                        CardView(content: emoji)
+                            .aspectRatio(2/3, contentMode: .fit)
+                    }
                 }
             }
+            .foregroundColor(.red)
             .padding(.horizontal)
             Spacer()
             HStack{
@@ -28,24 +32,29 @@ struct ContentView: View {
             .font(.largeTitle)
             .padding(.horizontal)
         }
+        .font(.largeTitle)
     }
        
 
     
     
     var remove: some View {
-        Button(action: {
-            emojiCount -= 1
-        }, label: {
+        Button {
+            if emojiCount > 1 {
+                emojiCount -= 1
+            }
+        } label: {
             VStack{
                 Image(systemName: "minus.circle")
             }
-        })
+        }
     }
     
     var add: some View {
         Button(action: {
-            emojiCount += 1
+            if emojiCount < emojis.count {
+                emojiCount += 1
+            }
         }, label: {
             VStack{
                 Image(systemName: "plus.circle")
@@ -67,7 +76,7 @@ struct CardView: View{
              let shape = RoundedRectangle(cornerRadius: 20)
              if isFaceUp {
                  shape.fill(.white)
-                 shape.stroke(lineWidth: 3)
+                 shape.strokeBorder(lineWidth: 3)
                  Text(content).font(.title)
              } else {
                  RoundedRectangle(cornerRadius: 20)
@@ -88,6 +97,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .preferredColorScheme(.dark)
+            .previewInterfaceOrientation(.portrait)
             
     }
 }
