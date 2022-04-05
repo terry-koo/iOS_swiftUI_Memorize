@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39595C3E27FC91B300080515 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39595C3D27FC91B300080515 /* Test.swift */; };
 		39B8FDEA27F9EA3200869BDD /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B8FDE927F9EA3200869BDD /* MemorizeApp.swift */; };
 		39B8FDEC27F9EA3200869BDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B8FDEB27F9EA3200869BDD /* ContentView.swift */; };
 		39B8FDEE27F9EA3400869BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B8FDED27F9EA3400869BDD /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39595C3D27FC91B300080515 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		39B8FDE627F9EA3200869BDD /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B8FDE927F9EA3200869BDD /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
 		39B8FDEB27F9EA3200869BDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		39B8FDE827F9EA3200869BDD /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				39595C3D27FC91B300080515 /* Test.swift */,
 				39B8FDE927F9EA3200869BDD /* MemorizeApp.swift */,
 				39B8FDEB27F9EA3200869BDD /* ContentView.swift */,
 				39B8FDED27F9EA3400869BDD /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				39B8FDEC27F9EA3200869BDD /* ContentView.swift in Sources */,
 				39B8FDEA27F9EA3200869BDD /* MemorizeApp.swift in Sources */,
+				39595C3E27FC91B300080515 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
